@@ -1,9 +1,9 @@
 import styles from './Button.module.scss';
 
-const Button = () => {
+const Button = (props) => {
   return (
     <button className={styles.button}>
-      <span className="fa fa-search" />
+      <span className={'fa fa-search'} />
     </button>
   );
 };

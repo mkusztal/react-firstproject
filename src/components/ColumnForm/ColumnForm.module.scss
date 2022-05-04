@@ -15,6 +15,14 @@
   border-radius: $radius;
 }
 
+.titleText {
+  padding-right: 5px;
+}
+
+.iconText {
+  padding: 0 5px 0 10px;
+}
+
 .button {
   background: $color-success;
   border: 0;
