@@ -12,14 +12,17 @@ const List = () => {
   ]);
 
   const addColumn = (newColumn) => {
-    setColumns([...columns, { id: shortid(), title: newColumn.title }]);
+    setColumns([
+      ...columns,
+      { id: shortid(), title: newColumn.title, icon: newColumn.icon },
+    ]);
   };
 
   return (
     <div className={styles.list}>
       <header className={styles.header}>
         <h2 className={styles.title}>
-          Things to do<span>soon!</span>
+          Things to do<span className={styles.span}>soon!</span>
         </h2>
       </header>
       <p className={styles.description}>
