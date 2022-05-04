@@ -1,23 +1,14 @@
-import { useState } from 'react';
+import styles from './Column.module.scss';
 
-const ColumnForm = (props) => {
-  const [value, setValue] = useState('');
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    props.action({ title: value });
-    setValue('');
-  };
-
+const Column = (props) => {
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-      />
-      <button>Add column</button>
-    </form>
+    <article className={styles.column}>
+      <h2 className={styles.title}>
+        <span className={styles.icon + ' fa fa-' + props.icon} />
+        {props.title}
+      </h2>
+    </article>
   );
 };
 
-export default ColumnForm;
+export default Column;
