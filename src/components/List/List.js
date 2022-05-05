@@ -77,6 +77,7 @@ const List = () => {
             title={column.title}
             icon={column.icon}
             cards={column.cards}
+            id={column.id}
             action={addCard}
           />
         ))}
