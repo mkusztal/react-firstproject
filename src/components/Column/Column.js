@@ -14,9 +14,11 @@ const Column = (props) => {
           <Card key={card.id} title={card.title} />
         ))}
       </ul>
-      <CardForm />
+      <CardForm columnId={props.id} action={props.action} />
     </article>
   );
 };
 
 export default Column;
+
+// {columns.map(column => <Column key={column.id} id={column.id} title={column.title} icon={column.icon} cards={column.cards} />)}

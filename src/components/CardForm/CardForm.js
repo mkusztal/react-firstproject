@@ -4,6 +4,7 @@ import TextInput from '../TextInput/TextInput';
 import Button from '../Button/Button';
 
 const CardForm = (props) => {
+  const [title, setTitle] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
     props.action(
@@ -14,8 +15,6 @@ const CardForm = (props) => {
     );
     setTitle('');
   };
-
-  const [title, setTitle] = useState('');
 
   return (
     <form onSubmit={handleSubmit} className={styles.cardForm}>
